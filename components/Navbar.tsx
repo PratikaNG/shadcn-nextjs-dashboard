@@ -19,10 +19,9 @@ function Navbar() {
   const { toggleSidebar } = useSidebar();
   
   return (
-    <nav className="p-4 flex items-center justify-between">
+    <nav className="p-4 flex items-center justify-between sticky top-0 bg-background z-10">
       {/* left */}
-      {/* <SidebarTrigger/> */}
-      <Button variant="outline" onClick={toggleSidebar}>Custom</Button>
+      <SidebarTrigger/>
       {/* right */}
       <div className="flex items-center gap-4">
         <Link href="/">Dashboard</Link>

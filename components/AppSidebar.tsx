@@ -57,7 +57,7 @@ function AppSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/">
-                <Image src="/logo.svg" alt="logo" width={20} height={20} />
+                <Image src={`https://avatars.githubusercontent.com/u/${process.env.GITHUB_USERID}?v=4`} alt="logo" width={20} height={20} />
                 <span>NG Dev</span>
               </Link>
             </SidebarMenuButton>

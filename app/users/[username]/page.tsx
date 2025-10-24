@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import EditUser from "@/components/EditUser";
+import { Avatar } from "@radix-ui/react-avatar";
+import { AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import AppLineChart from "@/components/AppLineChart";
 
 
 const SingleUserPage = () => {
@@ -144,9 +147,26 @@ const SingleUserPage = () => {
         {/* Right */}
         <div className="w-full xl:w-2/3 space-y-6">
           {/* user card container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src={`https://avatars.githubusercontent.com/u/${process.env.GITHUB_USERID}?v=4`} />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold">John Doe</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+              voluptas distinctio ab ipsa commodi fugiat labore quos veritatis
+              cum corrupti sed repudiandae ipsum, harum recusandae ratione ipsam
+              in, quis quia.
+            </p>
+            </div>
           {/* chart container */}
-          <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+             <h1 className="text-xl font-semibold">User Activity</h1>
+            <AppLineChart />
+          </div>
         </div>
       </div>
     </div>
